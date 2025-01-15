@@ -1,0 +1,13 @@
+# Backend
+backend/node_modules/
+backend/.env
+backend/*.log
+
+# Frontend
+frontend/node_modules/
+frontend/build/       # Si usas un proceso de build (como create-react-app)
+
+# Archivos comunes
+.DS_Store
+Thumbs.db
+/*.sh
