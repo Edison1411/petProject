@@ -11,3 +11,4 @@ frontend/build/       # Si usas un proceso de build (como create-react-app)
 .DS_Store
 Thumbs.db
 /*.sh
+/*.pdf
