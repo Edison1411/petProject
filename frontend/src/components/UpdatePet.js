@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import petsService from '../services/petsService';
 
-/**
- * Lee el petId desde ?petId=xxx y muestra un formulario para actualizar la mascota.
- * No muestra el ID en pantalla. Al guardar, envía PUT /pet y muestra un alert.
- */
+
 function UpdatePet() {
   const location = useLocation();
   const [petData, setPetData] = useState({
@@ -18,10 +15,10 @@ function UpdatePet() {
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const petId = params.get('petId'); // e.g. "1"
+    const petId = params.get('petId'); 
     if (!petId) {
       setLoading(false);
-      return; // No petId => no cargamos nada
+      return; 
     }
 
     const fetchPet = async () => {

@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import petsService from '../services/petsService';
 
-/**
- * Formulario para crear nueva mascota.
- * Muestra debajo una tabla con SOLO las mascotas
- * creadas en esta sesión (no el inventario completo).
- */
+
 function CreatePet() {
   const [petData, setPetData] = useState({
     category: { id: 1, name: 'Dogs' },
@@ -15,7 +11,6 @@ function CreatePet() {
   });
 
   const [createdPets, setCreatedPets] = useState([]); 
-  // Aquí guardamos LAS mascotas creadas en este formulario.
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,7 +39,7 @@ function CreatePet() {
       const created = await petsService.createPet(newData);
       alert('Pet created successfully!');
 
-      // Actualizamos la lista local de "createdPets"
+
       setCreatedPets((prev) => [...prev, created]);
 
     } catch (error) {

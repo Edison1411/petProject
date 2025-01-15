@@ -1,7 +1,7 @@
 const API_URL = 'http://localhost:3001/api';
 let token = null;
 
-// If you are storing the token in localStorage, retrieve it here
+
 const setToken = (newToken) => {
   token = newToken;
 };

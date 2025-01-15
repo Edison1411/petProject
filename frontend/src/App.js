@@ -16,7 +16,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        {/* Barra de navegación con Bootstrap */}
+        {/* Navbar */}
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
             <Link className="navbar-brand" to="/">Pet Store</Link>
@@ -50,7 +50,7 @@ function App() {
           </div>
         </nav>
 
-        {/* Rutas */}
+        {/* Routes */}
         <div className="container mt-4">
           <Routes>
             <Route path="/" element={<h2>Welcome to Pet Store!</h2>} />

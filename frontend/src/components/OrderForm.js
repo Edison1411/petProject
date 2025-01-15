@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import orderService from '../services/orderService';
 
-/**
- * Muestra un formulario para crear una orden (comprar mascota).
- * Lee "?petId=X" y lo pone en el form. Al finalizar, muestra un
- * mensaje de éxito en la misma pantalla.
- */
+
 function OrderForm() {
   const location = useLocation();
 

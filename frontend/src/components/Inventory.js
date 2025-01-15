@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import petsService from '../services/petsService';
 
-/**
- * Muestra las mascotas separadas por status (available, pending, sold).
- * Cada mascota tiene botones "Update" y "Buy".
- */
+
 function Inventory() {
   const navigate = useNavigate();
 
@@ -30,17 +27,17 @@ function Inventory() {
     fetchPets();
   }, []);
 
-  // Redirige a UpdatePet con ?petId=xxx
+
   const handleUpdate = (petId) => {
     navigate(`/update-pet?petId=${petId}`);
   };
 
-  // Redirige a OrderForm con ?petId=xxx
+
   const handleBuy = (petId) => {
     navigate(`/order-form?petId=${petId}`);
   };
 
-  // Renderiza una tabla Bootstrap de un array de mascotas
+
   const renderPetsTable = (petsArray) => {
     if (petsArray.length === 0) {
       return <div className="alert alert-info">No pets in this status.</div>;

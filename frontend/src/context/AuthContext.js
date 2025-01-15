@@ -7,9 +7,9 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
 
-  // Dummy login to demonstrate setting token
+
   const login = async (username, password) => {
-    // We are simulating the /user/login endpoint with query params
+
     const response = await fetch(`http://localhost:3001/api/user/login?username=${username}&password=${password}`, {
       method: 'GET'
     });
@@ -22,8 +22,7 @@ export const AuthProvider = ({ children }) => {
     petsService.setToken(data.token);
     orderService.setToken(data.token);
   };
-
-  // Dummy logout
+  
   const logout = () => {
     setToken(null);
     petsService.setToken(null);
